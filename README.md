@@ -12,8 +12,6 @@ Welcome! 👋 This is my midterms portfolio for CIS221 — a collection of my ha
 - **Loading, Organizing, Storing Data 1 & 2.ipynb** - Practical exercises on setting up data pipelines properly. Think of it as the foundation for any BI project.
 - **Quick Descriptives One.ipynb** - Summarizing data effectively. Useful for creating dashboards and business reports.
 
-All of these follow the **CRISP-DM Framework**, which is basically the standard roadmap for any data project in IS.
-
 ---
 
 ## What Actually Happened During Midterms?
