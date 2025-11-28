@@ -18,97 +18,21 @@ All of these follow the **CRISP-DM Framework**, which is basically the standard 
 
 ## What Actually Happened During Midterms?
 
-### The Real Challenges I Faced
+### What are the challenges I experienced in doing Exploratory Data Analysis, Inferential Regression Analysis, and Regression for Machine Learning?
 
-**1. Data is Messy (and Nobody Tells You How Messy)**
-
-When I started working with real datasets, I quickly realized that data quality is *the* biggest bottleneck. I spent way more time cleaning data than I expected:
-- Missing values everywhere (and no clear reason why they were missing)
-- Outliers that seemed like errors but actually meant something important
-- Inconsistent formats and data entry mistakes
-- Choosing between different imputation methods without knowing which was "correct"
-
-**2. Correlation ≠ Causation (and It's Harder to Remember Than You'd Think)**
-
-This sounds like common knowledge, but when you're looking at correlation coefficients, it's easy to fall into the trap of interpreting them causally. I realized that:
-- High correlations can be coincidental
-- Confounding variables hide the real relationships
-- Sometimes you need domain knowledge (talking to business stakeholders) to interpret results properly
-- Tools don't substitute for critical thinking
-
-**3. Machine Learning Models Are Overconfident**
-
-Building a model that gets 95% accuracy on training data feels amazing... until you test it on new data and it tanks. I learned the hard way that:
-- High accuracy during training often means overfitting, not a good model
-- You need proper validation strategies (cross-validation, holdout test sets)
-- Different metrics matter (accuracy isn't everything—sometimes precision or recall matters more)
-- Simplicity often beats complexity
+During my midterm projects, I found that the biggest challenges weren't in the complex formulas, but in the practical realities of working with data. I was surprised by how much time I spent just dealing with messy data—things like missing values, inconsistent formatting, and outliers that you don't typically see in textbook examples. It was also a humbling experience to realize how easy it is to misinterpret correlation as causation, especially when you're staring at a high correlation number and are eager to find a meaningful insight. Finally, I fell into the classic trap with machine learning where my model seemed to perform brilliantly, only to find out it was overfitted and couldn't generalize to new, unseen data.
 
 ---
 
-## Why Did This Happen?
+### What could have been the reasons why such an event happened? (you could bring in some theory into it). What are the things we have learned so that we can improve from this experience?
 
-### The Root Causes (With Some Theory)
-
-**On Data Quality:**
-Real-world data doesn't follow textbook assumptions. From an IS perspective, this usually comes down to:
-- Legacy systems with poor data governance
-- Manual data entry errors accumulating over time
-- Missing documentation on data collection methods
-- Integration issues when combining data from multiple sources
-
-Understanding these IS fundamentals helped me appreciate why data preparation is so critical in analytics projects.
-
-**On Statistical Interpretation:**
-Most correlation scenarios have hidden complexity:
-- **Simpson's Paradox** - trends reverse when you disaggregate data
-- **Confounding Variables** - external factors create false relationships
-- **Selection Bias** - the data you're seeing isn't representative
-
-This is especially important when working on BI projects—misinterpreting data can lead to bad business decisions.
-
-**On Model Performance:**
-Machine learning models optimize for training data, not real-world performance. The techniques that help combat this (regularization, cross-validation, ensemble methods) all exist because of this fundamental tension. It's not something you can just ignore.
+Looking back, I realized these issues are a direct result of how data is handled in the real world, which connects directly to my information systems studies. Data is often messy because it comes from different systems that weren't designed to work together, or because of years of inconsistent manual data entry. This experience taught me that good data governance isn't just a theoretical concept; it's the foundation of any reliable analysis. I also learned that statistical tools don't replace critical thinking. You have to constantly ask "why" and consider the business context, otherwise the numbers can be misleading. The key lesson for me was that a simple, explainable model that stakeholders can trust is often more valuable than a complex, black-box one, even if its accuracy is slightly lower.
 
 ---
 
-## What I'm Taking Away & Doing Differently Next Time
+### Now what do I need to do better next time?
 
-### Key Lessons
-
-✅ **Data Governance Matters More Than Model Complexity**
-- Before touching a model, invest in understanding and documenting the data
-- Create data dictionaries and quality checks upfront (especially relevant as an IS student)
-- Automate data profiling to catch issues early
-
-✅ **Always Talk to the Business**
-- What problem are we actually solving?
-- What decisions will this analysis inform?
-- What metrics actually matter to stakeholders?
-
-✅ **Reproducibility is Not Optional**
-- Document everything: assumptions, data sources, preprocessing steps, random seeds
-- Version control matters for data just as much as code
-- Future you (or a colleague) will thank you
-
-✅ **Simple Often Beats Clever**
-- A linear regression that you can explain is better than a black-box model that's slightly more accurate
-- Stakeholders need to trust your analysis—interpretability helps with that
-- Technical debt from over-complicated solutions slows you down later
-
-### What I'll Do Better Next Time
-
-1. **Start with a Data Audit** - Profile the dataset completely before analysis. Create automated quality reports.
-
-2. **Feature Engineering with Purpose** - Don't just throw everything into a model. Think about what variables actually matter for the business problem.
-
-3. **Multiple Validation Approaches** - Use stratified k-fold cross-validation, holdout sets, and business-relevant metrics. Not just accuracy.
-
-4. **Build Interpretable Models First** - Get your baseline with something simple and interpretable. Only add complexity if needed.
-
-5. **Document the "Why"** - Comments in code are fine, but I should write out the analytical decisions: Why did I choose this imputation method? Why are we using this feature? This helps with model governance and auditing.
-
-6. **Stakeholder-Ready Outputs** - Notebooks are great for development, but final deliverables should be dashboards, reports, or visualizations that non-technical people can understand.
+Moving forward, I'm going to change my approach. My new rule is to start every project with a thorough data audit to understand its quality and limitations before I write a single line of analysis code. I'll be more intentional about documenting my assumptions and the reasoning behind my decisions, especially why I choose a specific cleaning method or feature. Instead of just chasing a high accuracy score, I'll use a variety of metrics to get a more holistic view of my model's performance and focus on building solutions that are not only statistically sound but also interpretable and useful for making real-world decisions.
 
 ---
 
@@ -136,21 +60,19 @@ Each notebook is independent, so you can pick any one and run it without depende
 
 ---
 
-## Honest Reflection
+## My Honest Reflection
 
-This assignment helped me realize that analytics isn't just about algorithms and statistics—it's about understanding systems, data quality, and business problems. As an IS student, I appreciate how these notebooks connect to real database design, data governance, and BI strategy.
-
-The challenges I faced aren't failures; they're exactly what taught me the most. Next time I work on a project (whether for class or professionally), I'll have these lessons embedded in my process.
+Honestly, this activities shifted my perspective on what analytics is really about. I used to think it was mostly about memorizing the right Python libraries or statistical tests, but I’ve realized it’s actually about understanding the entire system—from the quality of the data to the actual business problem you're trying to solve. As an IS student, I can now see the direct link between these messy notebooks and real-world concepts like database design and data governance strategies. The errors and roadblocks I hit weren't just failures; they were exactly what taught me the most. I’m walking away from this experience understanding that successful analytics isn't just about getting a high accuracy score, but about being curious, understanding the "why" behind the data, and connecting technical skills to real business needs.
 
 ---
 
-**Course:** CIS221  
-**Assignment:** Journal 1 - Analytics Application Experience  
-**Framework:** CRISP-DM  
-**Created:** November 2025
+**Course:** CIS 221 - Analytics Application
+**Activity:** FJournal 1 - Analytics Application Experience  
+**Framework:** CRISP-DM Approach  
+**Created:** November 28, 2025
 
 **License:** GPL-3.0
 
 ---
 
-Feel free to reach out if you have questions about any of this work or want to discuss the concepts further. Always happy to talk data! 📊
+Feel free to reach out if you have questions about any of this work or want to discuss the concepts further. Always happy to talk data! 📊 
